@@ -14,4 +14,5 @@ private String adminId;
 private String name;
 private String password;
 private String about;
+private Gender gender;
 }
