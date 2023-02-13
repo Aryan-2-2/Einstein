@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.keyo.DTO.AdminDTO;
 import com.keyo.entites.Admin;
+import com.keyo.entites.Gender;
 import com.keyo.service.ModelMapperServiceImpl;
 import static com.keyo.constant.Constant.*;
 @RestController()
 @RequestMapping("admin")
 public class AdminController {
-
+ 
 	
 	@Autowired
 	private ModelMapperServiceImpl modelMapperService;
@@ -29,10 +30,13 @@ public class AdminController {
 	    admin.setName("Suresh");
 	    admin.setAbout("Java Developer");
 	    admin.setPassword("brajkishor");
+	    admin.setGender(Gender.MALE);
 		
 		AdminDTO dto = modelMapperService.adminToDto(admin);
 		return new ResponseEntity<>(dto, HttpStatus.OK);
 	    
 	}
+	
+	 
 	
 }
