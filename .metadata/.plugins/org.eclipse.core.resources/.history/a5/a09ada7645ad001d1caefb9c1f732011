@@ -1,0 +1,5 @@
+package com.map.model;
+
+public class AdminDTO {
+
+}

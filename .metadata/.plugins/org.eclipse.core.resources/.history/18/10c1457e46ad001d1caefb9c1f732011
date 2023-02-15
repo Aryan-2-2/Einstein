@@ -1,0 +1,9 @@
+package com.map.config;
+
+import com.map.model.Admin;
+import com.map.model.AdminDTO;
+
+public interface Mapper {
+public AdminDTO adminToAdminDto(Admin admin);
+public Admin adminDtoToAdmin(AdminDTO adminDto);
+}

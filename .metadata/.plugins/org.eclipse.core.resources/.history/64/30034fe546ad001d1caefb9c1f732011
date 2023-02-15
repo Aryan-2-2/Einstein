@@ -1,0 +1,12 @@
+package com.map.config;
+
+import org.mapstruct.InheritInverseConfiguration;
+
+import com.map.model.Admin;
+import com.map.model.AdminDTO;
+
+@org.mapstruct.Mapper
+public interface Mapper {
+public AdminDTO adminToAdminDto(Admin admin);
+public Admin adminDtoToAdmin(AdminDTO adminDto);
+}

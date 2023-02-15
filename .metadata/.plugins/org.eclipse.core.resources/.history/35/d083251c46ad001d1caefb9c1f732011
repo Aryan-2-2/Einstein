@@ -1,0 +1,24 @@
+package com.map.controller;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.map.model.Admin;
+import com.map.model.AdminDTO;
+
+@RestController
+public class AdminController {
+    ResponseEntity<AdminDTO> retrive(){
+	Admin admin = new Admin();
+	admin.setAbout("java developer");
+	admin.setName("suresh");
+	admin.setPassword("abcd");
+	
+	AdminDTO dto = new AdminDTO();
+	dto.setAbout(admin.getAbout());
+	dto.setName(admin.getName());
+	return new ResponseEntity<>(dto,HttpStatus.ACCEPTED);
+}
+}

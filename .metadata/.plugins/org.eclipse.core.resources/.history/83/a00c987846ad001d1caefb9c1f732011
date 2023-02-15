@@ -1,0 +1,5 @@
+package com.map.config;
+
+public interface Mapper {
+
+}
